@@ -1,0 +1,16 @@
+/* filepath: /src/components/AppHeader.css */
+.app-header {
+  width: 100%; /* Ensure header spans the entire width */
+  display: flex;
+  justify-content: flex-start; /* Align logo to the left */
+  align-items: center; /* Center logo vertically */
+  background-color: black;
+  padding: 10px 0; /* Add 10px padding vertically */
+}
+
+.app-logo {
+  color: yellow;
+  font-size: 36px;
+  margin: 0;
+  font-family: 'Ferrovial', sans-serif;
+}

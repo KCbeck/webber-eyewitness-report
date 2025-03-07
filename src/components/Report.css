@@ -1,0 +1,93 @@
+.report-container {
+  width: 100%; /* Ensure the report spans the full width */
+  padding: 20px;
+  max-width: 8.5in; /* Ensure it fits within 8.5" width */
+  border: 1px solid black; /* Add border to show grid lines */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.report-border {
+  border: 1px solid black; /* Add a border around the report */
+  padding: 20px; /* Add padding inside the border */
+  width: 100%; /* Ensure it spans 100% of the container */
+  max-width: 100%; /* Ensure it doesn't exceed parent width */
+  margin: 0 auto; /* Center horizontally */
+  padding-left: 10px; /* Add left padding */
+  padding-right: 10px; /* Add right padding */
+}
+
+.report-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 2%; /* Add 2% vertical padding */
+}
+
+.report-row .report-span {
+  width: 48%; /* Adjust width to fit within two columns */
+}
+
+.report-row .report-span[data-align="2"] {
+  text-align: right; /* Align right column text to the right */
+}
+
+.report-row:last-child {
+  border-bottom: none; /* Remove bottom border for the last row */
+}
+
+.signature-box {
+  border: 1px solid black; /* Add border to indicate signature box */
+  padding: 10px; /* Add padding inside the box */
+  text-align: center; /* Center the text inside the box */
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.signature-box label {
+  display: block; /* Display label as block */
+  margin-bottom: 5px; /* Add margin below the label */
+}
+
+.signature-box img {
+  max-width: 100%; /* Ensure the image fits within the box */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media print {
+  body.print-mode .report-container {
+    width: 100%; /* Ensure the report spans the full width */
+    max-width: 8.5in; /* Ensure it fits within 8.5" width */
+    height: auto; /* Auto height */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+
+  .report-container,
+  .report-border {
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+  }
+
+  .report-item,
+  .report-span,
+  .report-row {
+    margin: 0; /* Remove margin */
+    padding-bottom: 2%; /* Add vertical padding */
+  }
+
+  .report-row {
+    border-bottom: none; /* Remove bottom border */
+  }
+
+  .app-header,
+  .app-logo,
+  .print-buttons {
+    display: none; /* Hide navbar, logo, and buttons */
+  }
+
+  .report-border {
+    padding-left: 10px; /* Add left padding for print */
+    padding-right: 10px; /* Add right padding for print */
+  }
+}

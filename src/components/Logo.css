@@ -1,0 +1,7 @@
+.logo {
+  color: yellow;
+  font-size: 36px;
+  margin: 0;
+  font-family: 'Ferrovial', sans-serif;
+  margin-left: 2.5%; /* Added margin-left */
+}

@@ -1,0 +1,40 @@
+/* filepath: /src/components/EyewitnessForm.css */
+.eyewitness-form {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  gap: 20px;
+  padding: 20px;
+  width: 90%; /* Make form span 90% of the page */
+  margin-left: 5%; /* Center form with 5% left margin */
+  margin-right: 5%; /* Center form with 5% right margin */
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column; /* Ensure label is under input */
+  justify-content: space-between; /* Add space between form input boxes */
+  margin: 0; /* Remove margin */
+  width: 100%; /* Make form controls span the entire width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-row > div {
+  flex: 0 0 100%; /* Set width to 100% */
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between; /* Space the checkboxes equally apart */
+  width: 100%; /* Ensure the checkboxes span the entire width */
+  gap: 10px;
+  grid-column: span 1;
+}
+
+.eyewitness-form > button {
+  grid-column: span 1; /* Adjust button to span single column */
+  justify-self: center;
+}
+
+.form-control {
+  width: 100% !important; /* Ensure form controls span the full width */
+}

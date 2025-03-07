@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import EyewitnessForm from './components/EyewitnessForm';
+import Report from './components/Report';
+import AppHeader from './components/AppHeader';
 
 function App() {
+  const [reportData, setReportData] = useState(null);
+
+  const handleFormSubmit = (data) => {
+    setReportData(data);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppHeader />
+      {!reportData ? (
+        <>
+          <h1 style={{ textAlign: 'center' }}>Witness Statement Input</h1>
+          <EyewitnessForm onSubmit={handleFormSubmit} />
+        </>
+      ) : (
+        <Report data={reportData} />
+      )}
     </div>
   );
 }
