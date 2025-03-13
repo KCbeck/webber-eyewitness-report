@@ -4,9 +4,16 @@
   grid-template-columns: 1fr; /* Single column layout */
   gap: 20px;
   padding: 20px;
-  width: 90%; /* Make form span 90% of the page */
-  margin-left: 5%; /* Center form with 5% left margin */
-  margin-right: 5%; /* Center form with 5% right margin */
+  width: 100%; /* Make form span full width */
+  max-width: 600px; /* Limit the form width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+@media print {
+  .eyewitness-form {
+    max-width: 9in; /* Ensure it fits within 9" width when printing */
+    margin: 0 auto; /* Center horizontally when printing */
+  }
 }
 
 .form-row {
@@ -36,5 +43,7 @@
 }
 
 .form-control {
-  width: 100% !important; /* Ensure form controls span the full width */
+  width: 94% !important; /* Ensure form controls span 94% width */
+  margin-left: 3%; /* Add left margin of 3% */
+  margin-right: 3%; /* Add right margin of 3% */
 }

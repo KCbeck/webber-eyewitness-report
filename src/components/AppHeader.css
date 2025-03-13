@@ -1,11 +1,12 @@
 /* filepath: /src/components/AppHeader.css */
 .app-header {
-  width: 100%; /* Ensure header spans the entire width */
+  width: 100vw; /* Ensure header spans the entire viewport width */
   display: flex;
-  justify-content: flex-start; /* Align logo to the left */
-  align-items: center; /* Center logo vertically */
+  justify-content: center; /* Center the navbar */
+  align-items: center; /* Center items vertically */
   background-color: black;
   padding: 10px 0; /* Add 10px padding vertically */
+  margin: 0; /* Remove all margins */
 }
 
 .app-logo {
@@ -13,4 +14,15 @@
   font-size: 36px;
   margin: 0;
   font-family: 'Ferrovial', sans-serif;
+}
+
+.language-toggle {
+  margin-left: auto; /* Push the button to the right */
+  /* Remove the right margin */
+}
+
+@media print {
+  .app-header {
+    display: none; /* Hide the navbar when printing */
+  }
 }

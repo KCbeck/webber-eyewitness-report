@@ -1,6 +1,15 @@
 .App {
   text-align: center;
-  width: 100%; /* Ensure app spans full width */
+  width: 100vw; /* Ensure app spans the entire viewport width */
+  max-width: 100%; /* Ensure it spans the entire width */
+  display: flex;
+  flex-direction: column; /* Ensure header is at the top */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center; /* Center horizontally */
+  height: auto; /* Auto height */
+  min-height: 100vh; /* Minimum full viewport height */
+  margin: 0; /* Remove all margins */
+  background-color: black; /* Add black background */
 }
 
 .App-logo {
@@ -16,13 +25,8 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw; /* Ensure header spans the entire viewport width */
+  max-width: 100%; /* Ensure it spans the entire width */
 }
 
 .App-link {

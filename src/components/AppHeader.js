@@ -2,7 +2,7 @@ import React from 'react';
 import './AppHeader.css';
 import Logo from './Logo';
 
-const AppHeader = () => {
+const AppHeader = ({ language, toggleLanguage }) => {
   return (
     <header className="app-header">
       <Logo />

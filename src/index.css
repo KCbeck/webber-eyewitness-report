@@ -1,22 +1,29 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100vw; /* Ensure body spans 100% width */
+  height: auto; /* Auto height */
+  min-height: 100vh; /* Minimum full viewport height */
+  overflow-y: auto; /* Allow vertical scrolling */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    sans-serif; /* Ensure consistent font family */
+  -webkit-font-smoothing: antialiased; /* Ensure smooth font rendering */
+  -moz-osx-font-smoothing: grayscale; /* Ensure smooth font rendering on macOS */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align items to the top */
 }
 
 #root {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Ensure root spans 100% width */
+  max-width: 100%; /* Ensure it spans the entire width */
+  height: auto; /* Auto height */
+  min-height: 100vh; /* Minimum full viewport height */
+  margin: 0; /* Remove margin */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace; /* Ensure consistent font family for code */
 }

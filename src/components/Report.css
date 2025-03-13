@@ -1,18 +1,20 @@
 .report-container {
-  width: 100%; /* Ensure the report spans the full width */
-  padding: 20px;
-  max-width: 8.5in; /* Ensure it fits within 8.5" width */
-  border: 1px solid black; /* Add border to show grid lines */
+  width: 100vw; /* Ensure the report spans the full viewport width */
+  max-width: 100%; /* Ensure it spans the entire width */
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  padding: 20px;
+  margin: 0 auto; /* Center horizontally with equal margins */
+  overflow-y: auto; /* Allow vertical scrolling */
+  background-color: white; /* Add white background to the report */
+  border-left: 15% solid yellow; /* Add 15% left border */
+  border-right: 15% solid yellow; /* Add 15% right border */
 }
 
 .report-border {
-  border: 1px solid black; /* Add a border around the report */
-  padding: 20px; /* Add padding inside the border */
-  width: 100%; /* Ensure it spans 100% of the container */
-  max-width: 100%; /* Ensure it doesn't exceed parent width */
+  width: 100%; /* Ensure it spans the full width */
+  padding: 20px; /* Add padding inside the container */
+  max-width: 600px; /* Limit the container width */
   margin: 0 auto; /* Center horizontally */
   padding-left: 10px; /* Add left padding */
   padding-right: 10px; /* Add right padding */
@@ -21,16 +23,26 @@
 .report-row {
   display: flex;
   justify-content: space-between;
+  width: 100%; /* Ensure full width */
   margin-bottom: 10px;
   padding-bottom: 2%; /* Add 2% vertical padding */
 }
 
 .report-row .report-span {
-  width: 48%; /* Adjust width to fit within two columns */
+  width: 100%; /* Adjust width to 100% */
 }
 
 .report-row .report-span[data-align="2"] {
   text-align: right; /* Align right column text to the right */
+}
+
+.report-row .report-span[data-form-input="causeAndEvents"] {
+  width: 100%; /* Ensure cause and events span the full width */
+}
+
+.report-row .report-span.two-column {
+  width: 100%; /* Adjust width for two-column layout */
+  white-space: normal; /* Ensure text wraps */
 }
 
 .report-row:last-child {
@@ -38,31 +50,36 @@
 }
 
 .signature-box {
-  border: 1px solid black; /* Add border to indicate signature box */
-  padding: 10px; /* Add padding inside the box */
+  padding: 10%; /* Add padding inside the box */
   text-align: center; /* Center the text inside the box */
   width: 100%; /* Ensure it spans the full width */
+  height: 5%; /* Adjust height to be 5% */
 }
 
 .signature-box label {
-  display: block; /* Display label as block */
+  display: inline-block; /* Display label as inline-block */
+  width: auto; /* Auto fit to the width of the text */
   margin-bottom: 5px; /* Add margin below the label */
 }
 
 .signature-box img {
   max-width: 100%; /* Ensure the image fits within the box */
-  height: auto; /* Maintain aspect ratio */
+  height: 30%; /* Adjust height to be 30% of the original */
+  width: auto; /* Maintain aspect ratio */
 }
 
 @media print {
   body.print-mode .report-container {
     width: 100%; /* Ensure the report spans the full width */
-    max-width: 8.5in; /* Ensure it fits within 8.5" width */
+    max-width: 9in; /* Ensure it fits within 9" width */
     height: auto; /* Auto height */
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
   }
-
+  .img-fluid {
+    width: 20% !important; /* Ensure images fit within the container */
+    height: 20% !important; /* Auto height */
+  }
   .report-container,
   .report-border {
     border: none; /* Remove border */
@@ -81,13 +98,42 @@
   }
 
   .app-header,
+  .print-buttons,
   .app-logo,
-  .print-buttons {
-    display: none; /* Hide navbar, logo, and buttons */
+  .app-header label,
+  .App-header,
+  .App-link,
+  .App-logo {
+    display: none !important; /* Hide navbar, buttons, logo, label, and React app header */
+  }
+
+  .App {
+    display: block !important; /* Ensure the form is displayed */
+  }
+
+  .app-logo {
+    display: block; /* Ensure logo is displayed */
+    color: yellow; /* Ensure logo color is yellow */
+  }
+
+  .signature-box {
+    width: 25%; /* Ensure signature boxes are 50% width */
+    height: 18%; /* Adjust height to be 20px */
+  }
+
+  .signature-box img {
+    width: 15% !important; /* Set width to 12px with !important */
+    height: 15% !important; /* Set height to 9px with !important */
   }
 
   .report-border {
     padding-left: 10px; /* Add left padding for print */
     padding-right: 10px; /* Add right padding for print */
   }
+}
+
+/* Prevent button from growing too much when clicked */
+.print-buttons .btn {
+  transform: none !important; /* Prevent any scaling transformations */
+  margin-bottom: 3%; /* Add bottom margin of 3% */
 }
