@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/webberwaterjha/static/css/main.7d5a6435.css",
+    "main.js": "/webberwaterjha/static/js/main.9cdd665a.js",
+    "static/js/511.9baa41b8.chunk.js": "/webberwaterjha/static/js/511.9baa41b8.chunk.js",
+    "index.html": "/webberwaterjha/index.html",
+    "main.7d5a6435.css.map": "/webberwaterjha/static/css/main.7d5a6435.css.map",
+    "main.9cdd665a.js.map": "/webberwaterjha/static/js/main.9cdd665a.js.map",
+    "511.9baa41b8.chunk.js.map": "/webberwaterjha/static/js/511.9baa41b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d5a6435.css",
+    "static/js/main.9cdd665a.js"
+  ]
+}
