@@ -2,21 +2,52 @@ import React, { useState, useEffect } from 'react';
 import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea } from 'mdb-react-ui-kit';
 import SignaturePad from './SignaturePad';
 import './EyewitnessForm.css';
-import sampleData from './sampleData';
 import translations from './translations';
 import translateToEnglish from './translateToEnglish';
 import useTextToSpeech from '../hooks/useTextToSpeech';
 import useSpeechToText from '../hooks/useSpeechToText';
 
 const EyewitnessForm = ({ onSubmit, language, setLanguage }) => {
-  const [formData, setFormData] = useState(sampleData[language]);
+  const [formData, setFormData] = useState({
+    date: '',
+    projectName: '',
+    injuredPartyName: '',
+    eyewitness: '',
+    address: '',
+    phoneNumber: '',
+    companyName: '',
+    position: '',
+    incidentType: { accident: false, injury: false, propertyDamage: false },
+    incidentDate: '',
+    incidentTime: '',
+    conditions: '',
+    causeAndEvents: '',
+    eyewitnessSignature: '',
+    representativeSignature: ''
+  });
   const [, setIsListening] = useSpeechToText((transcript) => {
     setFormData((prevData) => ({ ...prevData, [currentField]: transcript }));
   });
   const [currentField, setCurrentField] = useState('');
 
   useEffect(() => {
-    setFormData(sampleData[language]);
+    setFormData({
+      date: '',
+      projectName: '',
+      injuredPartyName: '',
+      eyewitness: '',
+      address: '',
+      phoneNumber: '',
+      companyName: '',
+      position: '',
+      incidentType: { accident: false, injury: false, propertyDamage: false },
+      incidentDate: '',
+      incidentTime: '',
+      conditions: '',
+      causeAndEvents: '',
+      eyewitnessSignature: '',
+      representativeSignature: ''
+    });
   }, [language]);
 
   const handleChange = (e) => {

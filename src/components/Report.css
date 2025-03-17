@@ -3,7 +3,7 @@
   max-width: 100%; /* Ensure it spans the entire width */
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
-  padding: 20px;
+  padding: 10px; /* Adjust padding for smaller screens */
   margin: 0 auto; /* Center horizontally with equal margins */
   overflow-y: auto; /* Allow vertical scrolling */
   background-color: white; /* Add white background to the report */
@@ -136,4 +136,18 @@
 .print-buttons .btn {
   transform: none !important; /* Prevent any scaling transformations */
   margin-bottom: 3%; /* Add bottom margin of 3% */
+}
+
+@media screen and (max-width: 768px) {
+  .report-container {
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+  .report-border {
+    max-width: 100%; /* Ensure it spans the full width */
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+  .signature-box img {
+    width: 50%; /* Adjust signature image size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
 }

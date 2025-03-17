@@ -72,24 +72,24 @@ const Report = ({ data, language }) => {
         <div className="container report-border">
           <ReportHeader />
           <div className="report-row">
-            <ReportRow id="date" label="Date" value={data.date} isTwoColumn />
-            <ReportRow id="projectName" label={language === 'es' ? 'Nombre del Proyecto' : 'Project Name'} value={data.projectName} align="2" isTwoColumn />
+            <ReportRow id="date" label="Date" value={data.date || 'N/A'} isTwoColumn />
+            <ReportRow id="projectName" label={language === 'es' ? 'Nombre del Proyecto' : 'Project Name'} value={data.projectName || 'N/A'} align="2" isTwoColumn />
           </div>
-          <ReportRow id="injuredPartyName" label="Injured Party Name" value={data.injuredPartyName} />
-          <ReportRow id="eyewitnessFullName" label="Eyewitness Full Name" value={data.eyewitness} />
-          <ReportRow id="address" label="Address" value={data.address} />
-          <ReportRow id="phoneNumber" label="Phone Number" value={data.phoneNumber} />
+          <ReportRow id="injuredPartyName" label="Injured Party Name" value={data.injuredPartyName || 'N/A'} />
+          <ReportRow id="eyewitnessFullName" label="Eyewitness Full Name" value={data.eyewitness || 'N/A'} />
+          <ReportRow id="address" label="Address" value={data.address || 'N/A'} />
+          <ReportRow id="phoneNumber" label="Phone Number" value={data.phoneNumber || 'N/A'} />
           <div className="report-row">
-            <ReportRow id="companyName" label="Company Name" value={data.companyName} isTwoColumn />
-            <ReportRow id="position" label="Position" value={data.position} align="2" isTwoColumn />
+            <ReportRow id="companyName" label="Company Name" value={data.companyName || 'N/A'} isTwoColumn />
+            <ReportRow id="position" label="Position" value={data.position || 'N/A'} align="2" isTwoColumn />
           </div>
           <ReportRow id="incidentType" label="Incident Type" value={`${data.incidentType.accident ? 'Accident ' : ''}${data.incidentType.injury ? 'Injury ' : ''}${data.incidentType.propertyDamage ? 'Property Damage' : ''}`} />
           <div className="report-row">
-            <ReportRow id="incidentDate" label="Date of Incident" value={data.incidentDate} isTwoColumn />
-            <ReportRow id="incidentTime" label="Time of Incident" value={data.incidentTime} align="2" isTwoColumn />
+            <ReportRow id="incidentDate" label="Date of Incident" value={data.incidentDate || 'N/A'} isTwoColumn />
+            <ReportRow id="incidentTime" label="Time of Incident" value={data.incidentTime || 'N/A'} align="2" isTwoColumn />
           </div>
-          <ReportRow id="conditions" label="Conditions" value={data.conditions} />
-          <ReportRow id="causeAndEvents" label="Cause and Events" value={data.causeAndEvents} />
+          <ReportRow id="conditions" label="Conditions" value={data.conditions || 'N/A'} />
+          <ReportRow id="causeAndEvents" label="Cause and Events" value={data.causeAndEvents || 'N/A'} />
           <ReportSignatures id="eyewitnessSignature" label="Eyewitness Signature" signature={data.eyewitnessSignature} />
           <ReportSignatures id="representativeSignature" label="Webber Waterworks Representative Signature" signature={data.representativeSignature} />
         </div>
