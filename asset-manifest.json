@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/webber-eyewitness-report/static/css/main.4476c310.css",
-    "main.js": "/webber-eyewitness-report/static/js/main.36b20a7c.js",
-    "static/js/511.9baa41b8.chunk.js": "/webber-eyewitness-report/static/js/511.9baa41b8.chunk.js",
+    "main.css": "/webber-eyewitness-report/static/css/main.1d1820af.css",
+    "main.js": "/webber-eyewitness-report/static/js/main.520c1db9.js",
+    "static/js/511.c38662cf.chunk.js": "/webber-eyewitness-report/static/js/511.c38662cf.chunk.js",
     "index.html": "/webber-eyewitness-report/index.html",
-    "main.4476c310.css.map": "/webber-eyewitness-report/static/css/main.4476c310.css.map",
-    "main.36b20a7c.js.map": "/webber-eyewitness-report/static/js/main.36b20a7c.js.map",
-    "511.9baa41b8.chunk.js.map": "/webber-eyewitness-report/static/js/511.9baa41b8.chunk.js.map"
+    "main.1d1820af.css.map": "/webber-eyewitness-report/static/css/main.1d1820af.css.map",
+    "main.520c1db9.js.map": "/webber-eyewitness-report/static/js/main.520c1db9.js.map",
+    "511.c38662cf.chunk.js.map": "/webber-eyewitness-report/static/js/511.c38662cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4476c310.css",
-    "static/js/main.36b20a7c.js"
+    "static/css/main.1d1820af.css",
+    "static/js/main.520c1db9.js"
   ]
 }
